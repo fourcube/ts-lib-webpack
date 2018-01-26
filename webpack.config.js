@@ -3,7 +3,7 @@ const pkg = require('./package.json')
 
 const config = {
   devtool: 'eval',
-  entry: resolve(__dirname, 'src/main.ts'),
+  entry: resolve(__dirname, 'src/lib.ts'),
   output: {
     path: resolve(__dirname, 'dist'),
     filename: 'lib.js',
@@ -15,8 +15,8 @@ const config = {
   },
   module: {
     rules: [
-      { test: /\.json$/, loader: 'json-loader', include: /package.json/ },
-      { test: /\.ts$/, loader: 'ts-loader' },
+      { test: /\.json$/, loader: 'json-loader' },
+      { test: /\.ts$/, loader: 'ts-loader', exclude: /node_modules/ },
     ]
   },
   devServer: {

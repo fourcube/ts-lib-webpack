@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Boilerplate for a js library.",
   "main": "./dist/lib.js",
-  "types": "./dist/lib/main.d.ts",
+  "types": "./dist/lib/lib.d.ts",
   "author": "Chris Grieger <chris@scolp.de>",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf dist; webpack"
+    "build": "rimraf dist; webpack",
+    "start": "webpack-dev-server"
   },
   "libraryConfig": {
     "name": "BoilerplateLib"
